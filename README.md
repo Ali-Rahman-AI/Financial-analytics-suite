@@ -345,8 +345,14 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
+## 📄 License
 
-furnished to do so, subject to the following conditions:
+This project is proprietary and confidential.
+
+**Copyright © 2026 Ali Rahman. All Rights Reserved.**
+
+Unauthorized copying, distribution, or use of this file, via any medium, is strictly prohibited.
+
 
 ## 📬 Contact
 

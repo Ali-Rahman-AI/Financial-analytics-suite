@@ -359,7 +359,7 @@ Unauthorized copying, distribution, or use of this file, via any medium, is stri
 **Project Maintainer**: Ali Rahman
 
 - **GitHub**: [github.com/Ali-Rahman-AI](https://github.com/Ali-Rahman-AI)
-- **Email**: ali.m.rahman369@gmai.com
+- **Email**: ali.m.rahman369@gmail.com
 - **LinkedIn**: [linkedin.com/in/ali-rahman-ai](https://linkedin.com/in/ali-rahman-ai)
 
 ---

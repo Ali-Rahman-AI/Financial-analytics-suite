@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Rahman - Data Science Resume</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #000000;
+            --text: #333333;
+            --text-light: #555555;
+            --border: #cccccc;
+            --bg: #ffffff;
+        }
+
+        /* Print Optimization for US Letter Size */
+        @page {
+            size: 8.5in 11in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .resume-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: var(--text) !important;
+            }
+        }
+
+        body {
+            font-family: 'Inter', 'Calibri', Arial, sans-serif;
+            background: #f0f0f0;
+            color: var(--text);
+            line-height: 1.35;
+            font-size: 10pt;
+        }
+
+        .resume-container {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 20px auto;
+            background: var(--bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            padding: 0.4in 0.5in;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 8px;
+            border-bottom: 1.5px solid var(--primary);
+            padding-bottom: 8px;
+        }
+
+        .name {
+            font-size: 20pt;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 9.5pt;
+            color: var(--text);
+        }
+
+        .contact-row a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .contact-row a:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
+            color: var(--text-light);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1px;
+            margin-bottom: 4px;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 9.5pt;
+            color: var(--text);
+            text-align: justify;
+        }
+
+        /* Education & Experience */
+        .entry {
+            margin-bottom: 5px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 10pt;
+            color: var(--primary);
+        }
+
+        .entry-date {
+            font-size: 9.5pt;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .entry-org {
+            font-size: 9pt;
+            color: var(--text);
+            font-style: italic;
+        }
+
+        .entry-details {
+            font-size: 9pt;
+            color: var(--text-light);
+        }
+
+        /* Skills - USA Format */
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px 0;
+        }
+
+        .skill-line {
+            width: 100%;
+            font-size: 9.5pt;
+            margin-bottom: 1px;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Bullet Lists */
+        ul {
+            margin-left: 16px;
+            margin-top: 1px;
+        }
+
+        li {
+            font-size: 9pt;
+            margin-bottom: 1px;
+            text-align: justify;
+        }
+
+        /* Projects Grid */
+        .project-entry {
+            margin-bottom: 4px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 9.5pt;
+            color: var(--primary);
+        }
+
+        .project-tech {
+            font-size: 8.5pt;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Certifications - Compact */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 16px;
+        }
+
+        .cert-item {
+            font-size: 9.5pt;
+        }
+
+        .cert-name {
+            font-weight: 600;
+        }
+
+        .cert-org {
+            color: var(--text-light);
+        }
+
+        /* Additional Info */
+        .additional {
+            font-size: 9.5pt;
+            color: var(--text);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- Header - USA International Standard -->
+        <header class="header">
+            <h1 class="name">Ali Rahman</h1>
+            <div class="contact-row">
+                <span>Lahore, Pakistan</span>
+                <span class="separator">|</span>
+                <a href="mailto:ali.m.rahman369@gmail.com">ali.m.rahman369@gmail.com</a>
+                <span class="separator">|</span>
+                <a href="https://linkedin.com/in/ali-rahman-ai" target="_blank">linkedin.com/in/ali-rahman-ai</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/Ali-Rahman-AI" target="_blank">github.com/Ali-Rahman-AI</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Results-driven Statistics undergraduate specializing in Data Science with demonstrated expertise in
+                Python, R, machine learning, and statistical analysis. Proven ability to develop end-to-end analytics
+                solutions, including financial dashboards and predictive models. Seeking internship opportunities to
+                apply quantitative skills in a data-driven environment.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Bachelor of Science in Statistics, Data Science Specialization</span>
+                    <span class="entry-date">Expected May 2028</span>
+                </div>
+                <div class="entry-org">COMSATS University Islamabad, Lahore Campus</div>
+                <div class="entry-details">CGPA: 3.64/4.00 | Currently in 4th Semester</div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Intermediate (Pre-Medical)</span>
+                    <span class="entry-date">Completed 2023</span>
+                </div>
+                <div class="entry-org">Board of Intermediate and Secondary Education, Lahore</div>
+            </div>
+        </section>
+
+        <!-- Technical Skills - USA Format -->
+        <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-section">
+                <div class="skill-line"><span class="skill-label">Programming Languages:</span> Python, R, SQL</div>
+                <div class="skill-line"><span class="skill-label">Data Analysis & ML:</span> Pandas, NumPy,
+                    scikit-learn, tidyverse, ARIMA, GARCH, Monte Carlo Simulation</div>
+                <div class="skill-line"><span class="skill-label">Data Visualization:</span> Matplotlib, Seaborn,
+                    Plotly, ggplot2, Power BI, DAX</div>
+                <div class="skill-line"><span class="skill-label">Web Frameworks:</span> Streamlit, R Shiny, HTML, CSS,
+                    JavaScript</div>
+                <div class="skill-line"><span class="skill-label">Tools & Platforms:</span> Git, GitHub, Jupyter
+                    Notebook, RStudio, Microsoft Office Suite</div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-entry">
+                <div class="project-header">
+                    <span class="project-title">Financial Analytics Suite — Python</span>
+                    <span class="project-tech">Python, Streamlit, scikit-learn, Plotly</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack financial dashboard integrating ML models for stock prediction, achieving
+                        85% accuracy on backtested data</li>
+                    <li>Implemented GARCH volatility modeling and Monte Carlo simulation for portfolio optimization
+                        across 50+ assets</li>
+                </ul>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-header">
+                    <span class="project-title">Financial Analytics Suite — R Shiny</span>
+                    <span class="project-tech">R, Shiny, tidyverse, forecast</span>
+                </div>
+                <ul>
+                    <li>Built an interactive web application for statistical testing and regression analysis with
+                        automated report generation</li>
+                    <li>Created portfolio optimization module with downloadable PDF/CSV exports, serving 4 different
+                        forecasting models</li>
+                </ul>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-header">
+                    <span class="project-title">COVID-19 Analytics Dashboard</span>
+                    <span class="project-tech">Power BI, DAX</span>
+                </div>
+                <ul>
+                    <li>Designed interactive Power BI dashboard analyzing 1M+ COVID-19 data points with regional
+                        comparisons and trend analysis</li>
+                </ul>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-header">
+                    <span class="project-title">Exploratory Data Analysis Projects</span>
+                    <span class="project-tech">Python, Pandas, Matplotlib, Seaborn</span>
+                </div>
+                <ul>
+                    <li>Conducted comprehensive EDA on Titanic dataset (891 records) and Pakistan population data,
+                        identifying key demographic patterns</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item"><span class="cert-name">Full Stack Web Development</span> — <span
+                        class="cert-org">6-Month Program, Sep 2024</span></div>
+                <div class="cert-item"><span class="cert-name">MS Office Professional</span> — <span
+                        class="cert-org">3-Month Program, Sep 2024</span></div>
+                <div class="cert-item"><span class="cert-name">Joining Data with pandas</span> — <span
+                        class="cert-org">DataCamp, Nov 2025</span></div>
+                <div class="cert-item"><span class="cert-name">Data Manipulation with pandas</span> — <span
+                        class="cert-org">DataCamp, Nov 2025</span></div>
+                <div class="cert-item"><span class="cert-name">Intermediate Python</span> — <span
+                        class="cert-org">DataCamp, Nov 2025</span></div>
+                <div class="cert-item"><span class="cert-name">Introduction to Python</span> — <span
+                        class="cert-org">DataCamp, Nov 2025</span></div>
+                <div class="cert-item"><span class="cert-name">Understanding Data Science</span> — <span
+                        class="cert-org">DataCamp, Nov 2025</span></div>
+            </div>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="section">
+            <h2 class="section-title">Additional Information</h2>
+            <p class="additional">
+                <strong>Languages:</strong> English (Professional), Urdu (Native) &nbsp;|&nbsp;
+                <strong>Interests:</strong> Machine Learning, Quantitative Finance, Statistical Modeling &nbsp;|&nbsp;
+                <strong>Availability:</strong> Open to remote opportunities and relocation
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>

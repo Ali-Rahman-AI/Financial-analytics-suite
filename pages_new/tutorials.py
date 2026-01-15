@@ -31,13 +31,18 @@ def render():
     # Create columns for input and button
     col1, col2 = st.columns([3, 1])
     
+    # Initialize default video URL if not present
+    if 'active_video_url' not in st.session_state:
+        st.session_state.active_video_url = "https://youtu.be/3xTi3oCMWzQ"
+
     with col1:
         # Input for URL
         video_url = st.text_input(
             "Paste Video URL", 
+            value=st.session_state.active_video_url,
             placeholder="https://www.youtube.com/watch?v=...", 
             label_visibility="collapsed",
-            key="custom_video_url"
+            key="custom_video_url_input"
         )
     
     with col2:
